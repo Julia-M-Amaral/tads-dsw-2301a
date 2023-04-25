@@ -17,29 +17,30 @@
       <ul id="conhecimentos">
       </ul>
     </div>
+
     <script>
 
-      function mostrarDadosTela(dadosPessoa) {
-        document.getElementById('nome').innerHTML = dadosPessoa.nome;
-        document.getElementById('email').innerHTML = dadosPessoa.email;
-        document.getElementById('telefone').innerHTML = dadosPessoa.telefone;
-        document.getElementById('dataNascimento').innerHTML = dadosPessoa.dataNascimento;
+      function mostrarDadosTela(dadosJulia) {
+        document.getElementById('nome').innerHTML = dadosJulia.nome;
+        document.getElementById('email').innerHTML = dadosJulia.email;
+        document.getElementById('telefone').innerHTML = dadosJulia.telefone;
+        document.getElementById('dataNascimento').innerHTML = dadosJulia.dataNascimento;
 
         let elUl = document.getElementById('conhecimentos');
-        for (let i = 0; i < dadosPessoa.conhecimentos.length; i++) {
-          elUl.insertAdjacentHTML('beforeend', '<li>' + dadosPessoa.conhecimentos[i] + '</li>');
+        for (let i = 0; i < dadosJulia.conhecimentos.length; i++) {
+          elUl.insertAdjacentHTML('beforeend', '<li>'  + dadosJulia.conhecimentos[i] + '</li>');
         }
       }
 
       function carregarDados() {
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', 'dadosDanilo.json', true);
+        xhr.open('GET', 'dadosJulia.json', true);
 
         // callback - função executado ao término da requisição
         xhr.onload = function() {
           if (xhr.status === 200) {
-            let dadosPessoa = JSON.parse(xhr.responseText);
-            mostrarDadosTela(dadosPessoa);
+            let dadosJulia = JSON.parse(xhr.responseText);
+            mostrarDadosTela(dadosJulia);
           } else {
             alert('Erro: ' + xhr.status);
           }

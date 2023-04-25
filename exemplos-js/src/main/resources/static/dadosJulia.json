@@ -1,0 +1,26 @@
+{
+  "nome": "Julia Mangabeira",
+  "email": "Julia@Jubsz.com.br",
+  "telefone": "(11) 99999-1234",
+  "dataNascimento": "2002-07-23",
+  "experienciasProfissionais": [
+    {
+      "empresa": "Hospital Santa Catarina",
+      "cargo": "Auxiliar Administrativo",
+      "dataInicio": "2019-06-02",
+      "dataTermino": "Atual"
+    }
+  ],
+  "formacaoAcademica": [
+    {
+      "curso": "Análise e Desenvolvimento de Sistemas",
+      "instituicao": "SENAC",
+      "dataConclusao": "2024-07-01"
+    }
+  ],
+  "conhecimentos": [
+    "JAVA",
+    "HTML",
+    "JAVASCRIPT"
+  ]
+}
